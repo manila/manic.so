@@ -28,7 +28,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: blog
-        path: ./build
+        path: build/
 
   build-links:
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: links
-          path: .         
+          path: .
 
   deploy-to-github-pages:
     needs: build-blog
@@ -53,5 +53,8 @@ jobs:
       - name: Move links to root dir
         shell: bash
         run: |
+          ls -al
           cp -a ./links/. ./
           ls -al
+          ls links
+          ls blog
