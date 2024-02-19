@@ -130,5 +130,5 @@ dist
 .pnp.*
 
 # build
-build/
+# build/ removing as this github-actions appears to ignore these artifacts when deploying to gh-pages
 backup/
