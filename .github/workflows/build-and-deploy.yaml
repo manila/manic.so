@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: blog
-        path: blog/build
+        path: blog/build/
         
   build-links:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: links
-          path: links/**
+          path: links/
 
   upload-to-github-pages:
     needs: [build-links, build-blog]
