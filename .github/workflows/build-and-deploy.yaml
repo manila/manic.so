@@ -27,8 +27,8 @@ jobs:
     - name: Copy to Output Directory
       shell: bash
       run: |
-        mkdir -p /output/blog
-        cp ./build/* /output/blog/
+        mkdir -p ../output/blog
+        cp ./build/* ../output/blog/
 
   deploy-to-github-pages:
     needs: build-blog
