@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanic_so_blog=self.webpackChunkmanic_so_blog||[]).push([[603],{6859:a=>{a.exports=JSON.parse('{"label":"privacy","permalink":"/tags/privacy","allTagsPath":"/tags","count":1,"unlisted":false}')}}]);

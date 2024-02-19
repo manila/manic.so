@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmanic_so_blog=self.webpackChunkmanic_so_blog||[]).push([[405],{7057:s=>{s.exports=JSON.parse('{"title":"Recent posts","items":[]}')}}]);
