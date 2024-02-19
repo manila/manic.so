@@ -28,7 +28,7 @@ jobs:
       shell: bash
       run: |
         mkdir -p ../output/blog
-        cp ./build/* ../output/blog/
+        cp -r ./build/* ../output/blog/
 
   deploy-to-github-pages:
     needs: build-blog
