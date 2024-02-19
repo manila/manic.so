@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: blog
-        path: ./blog/build
+        path: blog/build/
         
   build-links:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: links
-          path: .
+          path: links/
 
   upload-to-github-pages:
     needs: [build-links, build-blog]
@@ -58,7 +58,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: github-pages
-          merge-multiple: true
+          merge-multiple: false
       - name: Clean up file structure
         shell: bash
         run: |
