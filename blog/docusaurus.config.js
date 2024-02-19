@@ -72,7 +72,9 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/logo-large.png',
-      respectPrefersColorScheme: true,
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'Manuel Nila\'s Blog',
         hideOnScroll: true,
