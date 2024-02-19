@@ -86,7 +86,7 @@ const config = {
           {
             href: 'projects/',
             label: 'Projects',
-            position: 'Left',
+            position: 'left',
           },
         ],
       },
