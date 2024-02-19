@@ -82,13 +82,13 @@ const config = {
 //          alt: 'manic logo',
 //          src: 'img/logo.png',
 //        },
-//        items: [
-//          {
-//            href: 'https://github.com/facebook/docusaurus',
-//            label: 'GitHub',
-//            position: 'right',
-//          },
-//        ],
+        items: [
+          {
+            href: 'projects/',
+            label: 'Projects',
+            position: 'Left',
+          },
+        ],
       },
 /*
       footer: {
