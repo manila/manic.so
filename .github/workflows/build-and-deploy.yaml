@@ -1,0 +1,42 @@
+name: Build and Deploy Website
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-blog:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./blog
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v3
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: Build Blog
+      run: npm run build
+    - name: Copy to Output Dir
+      shell: bash
+      run: |
+        mkdir -p /output/blog
+        cp ./build/* /output/blog/
+
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: manic-so
+          path: manic-so
