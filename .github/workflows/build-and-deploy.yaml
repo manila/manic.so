@@ -53,5 +53,5 @@ jobs:
       - name: Move links to root dir
         shell: bash
         run: |
-          cp -r ./links/* .
+          cp -a ./links/. ./
           ls -al
