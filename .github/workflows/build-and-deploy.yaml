@@ -58,7 +58,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: github-pages
-          merge-multiple: true
+          merge-multiple: false
       - name: Clean up file structure
         shell: bash
         run: |
