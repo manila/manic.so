@@ -84,7 +84,7 @@ const config = {
 //        },
         items: [
           {
-            href: 'projects/',
+            href: 'https://github.com/manila',
             label: 'Projects',
             position: 'left',
           },
