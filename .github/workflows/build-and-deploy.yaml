@@ -28,7 +28,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: blog
-        path: build/
+        path: build
 
   build-links:
     runs-on: ubuntu-latest
