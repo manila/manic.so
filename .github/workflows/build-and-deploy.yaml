@@ -24,18 +24,34 @@ jobs:
       run: npm install
     - name: Build Blog
       run: npm run build
-    - name: Copy to Output Directory
-      shell: bash
-      run: |
-        mkdir -p ../output/blog
-        cp -r ./build/* ../output/blog/
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: blog
+        path: ./build
+
+  build-links:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./links
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: links
+          path: .         
 
   deploy-to-github-pages:
     needs: build-blog
     runs-on: ubuntu-latest
     steps:
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: manic-so
-          path: ./build
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+      - name: Move links to root dir
+        shell: bash
+        run: |
+          cp -r ./links/* .
+          ls -al
