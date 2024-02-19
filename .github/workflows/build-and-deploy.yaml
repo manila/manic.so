@@ -45,7 +45,7 @@ jobs:
           path: .
 
   deploy-to-github-pages:
-    needs: build-blog
+    needs: [build-links, build-blog]
     runs-on: ubuntu-latest
     steps:
       - name: Download Build Artifacts
