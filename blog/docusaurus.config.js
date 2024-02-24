@@ -34,8 +34,8 @@ const config = {
         docs: false,
         blog: {
           id: 'blog',
-          path: './posts',
-          routeBasePath: '/posts',
+          path: './blog',
+          routeBasePath: '/blog',
           showReadingTime: true,
           blogTitle: 'Manuel Nila',
           blogSidebarCount: 0,
@@ -104,7 +104,7 @@ const config = {
           {
             label: 'blog',
             position: 'left',
-            to: 'posts',
+            to: 'blog',
           },
           {
             label: 'projects',
@@ -112,10 +112,16 @@ const config = {
             to: 'projects',
           },
           {
-            label: 'GitHub',
             position: 'right',
             href: 'https://github.com/manila',
+            className: 'header-github-link',
             'aria-label': 'GitHub repository',
+          },
+          {
+            position: 'right',
+            href: 'https://manic.so/blog/rss.xml',
+            className: 'header-rss-link',
+            'aria-label': 'RSS Feed',
           },
           /*
           {
