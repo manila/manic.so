@@ -1,64 +1,47 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Manuel Nila\'s Blog',
-  tagline: 'Ramblings of a Software Engineer',
+  title: 'Manuel Nila',
+  tagline: 'Manuel Nila',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://manic.so/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/blog/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'manila', // Usually your GitHub org/user name.
-  projectName: 'manic.so', // Usually your repo name.
+  baseUrl: '/',
   trailingSlash: true,
 
-  onBrokenLinks: 'throw',
+  organizationName: 'manila',
+  projectName: 'manic.so',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  markdown: {
+    mermaid: true
+  },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false, /* {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        }, */
+        docs: false,
         blog: {
+          id: 'blog',
           path: './posts',
-          routeBasePath: '/',
+          routeBasePath: '/posts',
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          blogTitle: 'Manuel Nila',
           blogSidebarCount: 0,
           feedOptions: {
-	    copyright: `© ${new Date().getFullYear()} Manuel Nila`
-	  },
+	          copyright: `© ${new Date().getFullYear()} Manuel Nila`
+	        },
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -67,27 +50,80 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'projects',
+        path: './projects',
+        routeBasePath: 'projects',
+        showReadingTime: false,
+        blogSidebarCount: 0,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'notes',
+        path: './notes',
+        routeBasePath: 'notes',
+        showReadingTime: false,
+        blogSidebarCount: 0,
+      },
+    ],
+    /*
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'index',
+        path: './pages',
+        routeBasePath: '/',
+      },
+    ],
+    */
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/logo-large.png',
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Manuel Nila\'s Blog',
+        title: 'Manuel Nila',
         hideOnScroll: true,
-//        logo: {
-//          alt: 'manic logo',
-//          src: 'img/logo.png',
-//        },
         items: [
+          /*
           {
-            href: 'https://github.com/manila',
-            label: 'Projects',
+            label: 'about',
             position: 'left',
+            to: 'about',
           },
+          */
+          {
+            label: 'blog',
+            position: 'left',
+            to: 'posts',
+          },
+          {
+            label: 'projects',
+            position: 'left',
+            to: 'projects',
+          },
+          {
+            label: 'GitHub',
+            position: 'right',
+            href: 'https://github.com/manila',
+            'aria-label': 'GitHub repository',
+          },
+          /*
+          {
+            label: 'notes',
+            position: 'left',
+            to: 'notes'
+          },
+          */
         ],
       },
 /*
@@ -136,7 +172,6 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
-      prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
