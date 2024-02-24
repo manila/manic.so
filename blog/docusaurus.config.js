@@ -37,7 +37,7 @@ const config = {
           path: './blog',
           routeBasePath: '/blog',
           showReadingTime: true,
-          blogTitle: 'Manuel Nila',
+          blogTitle: 'Blog',
           blogSidebarCount: 0,
           feedOptions: {
 	          copyright: `© ${new Date().getFullYear()} Manuel Nila`
@@ -58,6 +58,7 @@ const config = {
         path: './projects',
         routeBasePath: 'projects',
         showReadingTime: false,
+        blogTitle: 'Projects',
         blogSidebarCount: 0,
       },
     ],
