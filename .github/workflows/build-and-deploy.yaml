@@ -51,7 +51,7 @@ jobs:
           path: links/
 
   upload-to-github-pages:
-    needs: [build-links, build-blog]
+    needs: [build-blog]
     runs-on: ubuntu-latest
     steps:
       - name: Download Build Artifacts
@@ -62,8 +62,8 @@ jobs:
       - name: Clean up file structure
         shell: bash
         run: |
-          cp -a ./github-pages/links/. ./github-pages/
-          rm -rf ./github-pages/links
+          cp -a ./github-pages/blog/. ./github-pages/
+          rm -rf ./github-pages/blog
           ls -al github-pages
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -84,4 +84,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
