@@ -29,7 +29,10 @@ jobs:
       run: |
         ls -al
         ls -al build
+        ls -al build/blog
         ls -al ..
+        touch build/.nojekyll
+        touch build/blog/.nojekyll
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
