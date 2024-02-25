@@ -8,7 +8,7 @@ const config = {
 
   url: 'https://manic.so/',
   baseUrl: '/',
-  trailingSlash: true,
+  trailingSlash: false,
 
   organizationName: 'manila',
   projectName: 'manic.so',
