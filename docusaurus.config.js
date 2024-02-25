@@ -120,7 +120,7 @@ const config = {
           },
           {
             position: 'right',
-            href: 'https://manic.so/blog/rss.xml',
+            href: 'https://manic.so/atom.xml',
             className: 'header-rss-link',
             'aria-label': 'RSS Feed',
           },
