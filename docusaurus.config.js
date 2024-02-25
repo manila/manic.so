@@ -35,12 +35,12 @@ const config = {
         blog: {
           id: 'blog',
           path: './blog',
-          routeBasePath: '/blog',
+          routeBasePath: '/',
           showReadingTime: true,
           blogTitle: 'Blog',
           blogSidebarCount: 0,
           feedOptions: {
-	          copyright: `© ${new Date().getFullYear()} Manuel Nila`
+	          copyright: `© ${new Date().getFullYear()} Manuel Nila`,
 	        },
         },
         theme: {
@@ -105,7 +105,7 @@ const config = {
           {
             label: 'blog',
             position: 'left',
-            to: 'blog',
+            to: '/',
           },
           {
             label: 'projects',
