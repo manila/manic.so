@@ -8,9 +8,6 @@ on:
 jobs:
   build-blog:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./blog
     steps:
     - name: Clone repository
       uses: actions/checkout@v3
@@ -19,7 +16,7 @@ jobs:
       with:
         node-version: '20'
         cache: 'npm'
-        cache-dependency-path: './blog/package-lock.json'
+        cache-dependency-path: './package-lock.json'
     - name: Install Dependencies 
       run: npm install
     - name: Build Blog
@@ -30,14 +27,13 @@ jobs:
         ls -al
         ls -al build
         ls -al build/blog
-        ls -al ..
         touch build/.nojekyll
         touch build/blog/.nojekyll
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: blog
-        path: blog/build/
+        name: manic.so
+        path: build/
 
   upload-to-github-pages:
     needs: [build-blog]
@@ -48,12 +44,6 @@ jobs:
         with:
           path: github-pages
           merge-multiple: false
-      - name: Clean up file structure
-        shell: bash
-        run: |
-          cp -a ./github-pages/blog/. ./github-pages/
-          rm -rf ./github-pages/blog
-          ls -al github-pages
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
