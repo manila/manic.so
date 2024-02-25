@@ -31,6 +31,8 @@ jobs:
         ls -al build
         ls -al build/blog
         ls -al ..
+        touch build/.nojeykll
+        touch build/blog/.nojeykll
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
