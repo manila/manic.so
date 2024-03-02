@@ -72,16 +72,14 @@ const config = {
         blogSidebarCount: 0,
       },
     ],
-    /*
     [
       '@docusaurus/plugin-content-pages',
       {
-        id: 'index',
+        id: 'pages',
         path: './pages',
         routeBasePath: '/',
       },
     ],
-    */
   ],
 
   themeConfig:
@@ -106,6 +104,7 @@ const config = {
             label: 'blog',
             position: 'left',
             to: '/',
+            activeBaseRegex: '^(/$|blog)'
           },
           {
             label: 'projects',
