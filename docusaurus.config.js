@@ -104,7 +104,7 @@ const config = {
             label: 'blog',
             position: 'left',
             to: '/',
-            activeBaseRegex: '^(/$|blog)'
+            activeBaseRegex: '^(/$|blog$)'
           },
           {
             label: 'projects',
