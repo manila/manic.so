@@ -9,9 +9,9 @@ slug: blog/tic-tac-toe-with-bitboards
 
 A Tic-Tac-Toe game using bitboards to store player state.
 
-This post assumes you can read a bit of C code and you have a basic understanding of how numbers can be represented in binary.
-
 What is a bitboard you might ask? It is a data structure that represents player positions on a board by using a series of bits.
+
+<!-- truncate -->
 
 Here is an example of how individual bits correspond to positions on a tic-tac board (3x3 grid), 
 

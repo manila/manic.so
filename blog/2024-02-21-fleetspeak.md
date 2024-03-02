@@ -12,6 +12,8 @@ slug: blog/fleetspeak-kubernetes
 
 Fleetspeak is a protocol that is part of the Google's GRR Rapid Response incident response framework. It's primarily used to provide a secure connection from the GRR Server to clients/hosts. This post aimes to document my exploration of this tool.
 
+<!-- truncate -->
+
 ## The environment
 
 The environment I am using to test this is relativley straight forward. The clients are located on the public internet and the server which they need to communicate to is available on a kubernets ingress resource, specifically GCE which will provide the TLS termination for the publicly routable address.

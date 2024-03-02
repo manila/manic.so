@@ -13,6 +13,8 @@ Using the :target selector you can style elements when they are "targeted" by a 
 
 So in part to facilitate users without JavaScript enabled and because it's a neat trick, I used this CSS selector to make a reader mode toggle that doesn't require JavaScript.
 
+<!-- truncate -->
+
 <a class="enabled" href="#reader">Try it out</a>
 <a class="disabled" href="#">Toggle it back</a> 
 
