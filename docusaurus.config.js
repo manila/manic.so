@@ -72,6 +72,7 @@ const config = {
         blogSidebarCount: 0,
       },
     ],
+    /*
     [
       '@docusaurus/plugin-content-pages',
       {
@@ -80,6 +81,7 @@ const config = {
         routeBasePath: '/',
       },
     ],
+    */
   ],
 
   themeConfig:
@@ -132,6 +134,11 @@ const config = {
           */
         ],
       },
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.vsDark,
+        additionalLanguages: ['protobuf'],
+      },
 /*
       footer: {
         style: 'dark',
@@ -178,10 +185,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-*/
+      */
     }),
 };
 
