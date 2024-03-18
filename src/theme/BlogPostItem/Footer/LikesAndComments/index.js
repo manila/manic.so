@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './style.css';
 
 export default function LikesAndComments(props) {
   const [webmentionCount, setWebmentionCount] = useState(0);
@@ -10,5 +11,9 @@ export default function LikesAndComments(props) {
       .catch(error => console.log(error))
   }, [])
 
-  return (<><p>{webmentionCount} Webmentions(s)</p></>)
+  return (
+    <>
+      <p className='webmention-counter'>{webmentionCount}</p>
+    </>
+  )
 }
