@@ -23,6 +23,13 @@ const config = {
         href: 'https://github.com/manila',
       },
     },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'webmention',
+        href: 'https://webmention.io/manic.so/webmention',
+      },
+    }
   ],
 
   markdown: {
