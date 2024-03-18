@@ -15,6 +15,16 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'me',
+        href: 'https://github.com/manila',
+      },
+    },
+  ],
+
   markdown: {
     mermaid: true
   },
