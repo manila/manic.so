@@ -9,9 +9,10 @@ export default function Webmentions(props) {
   const baseUrl = 'https://webmention.io/api';
   const countEndpoint = (target) => `${baseUrl}/count?target=${target}`;
   const mentionEndpoint = (target) => `${baseUrl}/mentions.jf2?target=${target}`;
-  const postUrl = window.location.href;
 
   useEffect(() => {
+    const postUrl = window.location.href;
+
     const webmentionCount = fetch(countEndpoint(postUrl))
       .then(response => response.json())
       .then(data => data.count)
