@@ -11,7 +11,7 @@ export default function Webmentions(props) {
   const mentionEndpoint = (target) => `${baseUrl}/mentions.jf2?target=${target}`;
 
   useEffect(() => {
-    const postUrl = 'https://manic.so/'//window.location.href;
+    const postUrl = window.location.href;
 
     const webmentionCount = fetch(countEndpoint(postUrl))
       .then(response => response.json())
