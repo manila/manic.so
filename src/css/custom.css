@@ -16,6 +16,7 @@
   --ifm-code-font-size: 95%;
   --ifm-heading-font-family: Georgia, serif;
   --ifm-heading-font-weight: 400;
+  --ifm-background-color: #fff;
   --ifm-navbar-background-color: var(--ifm-background-color);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
