@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './style.css';
+import styles from './styles.module.css';
 
 function Spacer() {
   return <p></p>;  
@@ -11,7 +11,7 @@ export default function Webmentions(props) {
   const mentionEndpoint = (target) => `${baseUrl}/mentions.jf2?target=${target}`;
 
   useEffect(() => {
-    const postUrl = window.location.href;
+    const postUrl = 'https://manic.so/'//window.location.href;
 
     const webmentionCount = fetch(countEndpoint(postUrl))
       .then(response => response.json())
@@ -36,8 +36,21 @@ export default function Webmentions(props) {
     <>
       <Spacer />
       {webmentions.count > 0 && (
-        <div className='webmentions'>
-          <p className='webmention-counter'>Mentioned by <b>{webmentions.authors[0].name}</b></p>
+        <div className={styles.webmentions}>
+          {webmentions.authors
+              .filter((e,i) => i < 3)
+              .map(author => (
+                <img src={author.photo} className={`${styles.webmentionphoto} ${styles.horizontalalign}`} />
+          ))}
+          <p className={`${styles.webmentiontext} ${styles.horizontalalign}`}>
+            Mentioned by <strong>{webmentions.authors[0].name}</strong>
+            {webmentions.count === 2 && (
+              <>{' and '}<strong>{webmentions.authors[1].name}</strong></>
+            )}
+            {webmentions.count > 2 && (
+              <>{' and '}<strong>{webmentions.count - 1 + ' others.'}</strong></>
+            )}
+          </p>
         </div>
       )}
     </>
