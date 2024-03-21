@@ -8,7 +8,6 @@ function Space() {
   return (<><p dangerouslySetInnerHTML={{__html: '&nbsp;'}} /></>);
 }
 export default function Now() {
-  console.log(useBlogPost())
   return (
     <Layout>
       <main className={clsx('container margin-vert--xl')}>
