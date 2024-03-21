@@ -89,7 +89,6 @@ const config = {
         blogSidebarCount: 0,
       },
     ],
-    /*
     [
       '@docusaurus/plugin-content-pages',
       {
@@ -98,7 +97,6 @@ const config = {
         routeBasePath: '/',
       },
     ],
-    */
   ],
 
   themeConfig:
