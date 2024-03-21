@@ -12,7 +12,7 @@ export default function Now() {
     <Layout>
       <main className={clsx('container margin-vert--xl')}>
         <div className="row">
-          <div className="col col--6 col--offset-4">
+          <div className="col col--9 col--offset-1">
             <img src="img/profile.png" className={styles.profile}/>
             <Space />
             <Heading as="h1" className="hero__title">Manuel Nila</Heading>
