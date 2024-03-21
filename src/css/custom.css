@@ -5,7 +5,13 @@
  */
 
 /* You can override the default Infima variables here. */
+@font-face {
+  font-family: "Lang Gothic";
+  src: url(AT-LangGothic-Variable.Trial.ttf)
+}
+ 
 :root {
+  --ifm-font-family-base: 'Lang Gothic', arial, sans-serif;
   --ifm-color-primary: #333333;
   --ifm-color-primary-dark: #2e2e2e;
   --ifm-color-primary-darker: #2b2b2b;
@@ -14,12 +20,21 @@
   --ifm-color-primary-lighter: #3b3b3b;
   --ifm-color-primary-lightest: #424242;
   --ifm-code-font-size: 95%;
-  --ifm-heading-font-family: Georgia, serif;
-  --ifm-heading-font-weight: 400;
+  --ifm-heading-font-family: 'Lang Gothic', Georgia, serif;
+  --ifm-heading-font-weight: 600;
+  --ifm-h2-font-size: 1.5em;
   --ifm-background-color: #fff;
   --ifm-navbar-background-color: var(--ifm-background-color);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
+}
+
+header h2 {
+  font-weight: var(--ifm-heading-font-weight);
+}
+
+h2, h3, h4 {
+  font-weight: 200;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
