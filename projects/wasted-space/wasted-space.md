@@ -13,6 +13,6 @@ slug: 'wasted-space'
 
 :::info
 
-This is part of a collaberation, the code is not freely avaiable but this will be available on [`itch.io`](https://itch.io) at a later date.
+This is part of a collaboration, the code is not freely available but this will be available on [`itch.io`](https://itch.io) at a later date.
 
 :::
