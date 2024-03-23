@@ -11,6 +11,8 @@ A [Webmention](https://www.w3.org/TR/webmention/) is a way to notify websites wh
 
 The purest form of this is where a website owner hosts a webmention endpoint that can receive webmentions, store them in a database, then display them on the appropriate page. Running this server is generally a little more involved but luckily there is a handy service called [webmention.io](https://webmention.io) which handles the receiving, storage, and provides a REST endpoint for fetching webmentions.
 
+<!-- truncate -->
+
  ```mermaid
  sequenceDiagram
   participant A as Website A
