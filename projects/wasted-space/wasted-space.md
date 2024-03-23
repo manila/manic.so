@@ -1,5 +1,6 @@
 ---
 title: 'Wasted Space'
+date: 2023-02-20
 authors: manila
 tags: ['game dev', 'programming', 'pixel art']
 slug: 'wasted-space'
@@ -13,6 +14,6 @@ slug: 'wasted-space'
 
 :::info
 
-This is part of a collaboration, the code is not freely available but this will be available on [`itch.io`](https://itch.io) at a later date.
+This is part of a collaboration, the code is not freely available but this will be available to play on [`itch.io`](https://itch.io) at a later date.
 
 :::
