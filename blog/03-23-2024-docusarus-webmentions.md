@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Docusarus Webmentions"
+title: "Docusaurus Webmentions"
 date: 2024-03-23
 authors: [manila]
 tags: [indieweb]
-slug: blog/docusarus-webmentions
+slug: blog/docusaurus-webmentions
 ---
 
 A [Webmention](https://www.w3.org/TR/webmention/) is a way to notify websites when a link to a website is posted on a different website.
@@ -29,7 +29,7 @@ The purest form of this is where a website owner hosts a webmention endpoint tha
 
  One thing to keep in mind when using webmention.io is that it is pull-based, so your website will need to check for new webmentions. This is usually not a problem though since you'll only want to check for webmentions of page when that page is loaded.
 
- For my current site which uses Docusarus I do this with React, here is how I fetch webmentions:
+ For my current site which uses Docusaurus I do this with React, here is how I fetch webmentions:
 
  ```JavaScript
 import React, {useState, useEffect} from 'react';
